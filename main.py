@@ -57,8 +57,8 @@ updater.start_polling()
 def send():
     if check_availability() == "In stock":
         message = "Time to buy new shoes!!!\nhttps://us.puma.com/us/en/pd/porsche-design-pwrplate-motorsport-mens-sneakers/307452?swatch=01&referrer-category=mens-shop-all-mens"
-		send_message = f"https://api.telegram.org/bot{bot_token}/sendMessage?chat_id={channel_id}&text={message}"
-		requests.get(send_message)
+	send_message = f"https://api.telegram.org/bot{bot_token}/sendMessage?chat_id={channel_id}&text={message}"
+	requests.get(send_message)
   
   
 schedule.every(24).hours.do(send)
